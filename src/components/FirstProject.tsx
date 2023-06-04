@@ -3,8 +3,6 @@ import { styled } from "styled-components";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-import Stats from "three/examples/jsm/libs/stats.module";
-
 function FirstProject() {
   useEffect(() => {
     const scene = new THREE.Scene();
@@ -44,9 +42,6 @@ function FirstProject() {
 
     const controls = new OrbitControls(camera, renderer.domElement);
 
-    const stats = new Stats();
-    document.body.appendChild(stats.dom);
-
     var xSpeed = 0.0001;
     var ySpeed = 0.0001;
 
@@ -71,7 +66,6 @@ function FirstProject() {
     const animate = () => {
       boxMesh.rotation.x += 0.01;
       boxMesh.rotation.y += 0.01;
-      stats.update();
       controls.update();
       renderer.render(scene, camera);
       requestId = window.requestAnimationFrame(animate);
