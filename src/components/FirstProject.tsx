@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { styled } from "styled-components";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -6,7 +6,6 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Stats from "three/examples/jsm/libs/stats.module";
 
 function FirstProject() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const scene = new THREE.Scene();
 
@@ -18,7 +17,9 @@ function FirstProject() {
     );
     camera.position.z = 96;
 
-    const canvas = canvasRef.current;
+    const canvas = document.getElementById(
+      "myThreeJsCanvas"
+    ) as HTMLCanvasElement;
     const renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,
@@ -43,14 +44,14 @@ function FirstProject() {
 
     const controls = new OrbitControls(camera, renderer.domElement);
 
-    const stats = Stats();
+    const stats = new Stats();
     document.body.appendChild(stats.dom);
 
     var xSpeed = 0.0001;
     var ySpeed = 0.0001;
 
     document.addEventListener("keydown", onDocumentKeyDown, false);
-    function onDocumentKeyDown(event) {
+    function onDocumentKeyDown(event: any) {
       var keyCode = event.which;
       if (keyCode === 87) {
         boxMesh.position.y += ySpeed;
@@ -84,7 +85,7 @@ function FirstProject() {
   return (
     <div>
       왜이래
-      <BackCanvas ref={canvasRef} id="myThreeJsCanvas" />
+      <BackCanvas id="myThreeJsCanvas" />
     </div>
   );
 }
