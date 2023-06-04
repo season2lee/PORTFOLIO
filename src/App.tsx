@@ -8,6 +8,7 @@ function App() {
   return (
     <AppDiv>
       <GlobalStyles />
+      깃허브에서 spa가 안되다보니 라우팅이 안먹혀서 고뇌에 빠짐
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />

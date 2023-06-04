@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
     "styled-components": "^6.0.0-rc.3",
+    "three": "^0.153.0",
     "v6": "^0.0.0"
   },
   "devDependencies": {
