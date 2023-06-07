@@ -1,16 +1,15 @@
 import { useEffect } from "react";
 
-function AboutMe() {
+function EtcProject() {
   useEffect(() => {
     const box = document.getElementById("myThreeJsCanvas");
     box?.remove();
   }, []);
   return (
     <div>
-      AboutMe 슬로건은 home에서 보여줬으니 여긴 연혁(?) 하고 기술스텍이랑 수상
-      등
+      EtcProject 여긴 그냥 사소?하게 진행한 플젝들... 관통이랑 라트로프 들어갈듯
     </div>
   );
 }
 
-export default AboutMe;
+export default EtcProject;

@@ -78,7 +78,10 @@ function FirstProject() {
 
   return (
     <div>
-      왜이래
+      메타싸피 1인 화면 걸어다니며 휴대폰 컴포넌트 통해 오픈 가능 오픈하면 ppt
+      뜨고 실제 내가 작업한 휴대폰 내 ux/ui 간단한 기능 가능하게 (캡쳐,
+      채팅(이건 스크롤 관련으로 무한스크롤이랑 새 입력시 하단 고정 되게),
+      프로필은 내 프로필)
       <BackCanvas id="myThreeJsCanvas" />
     </div>
   );

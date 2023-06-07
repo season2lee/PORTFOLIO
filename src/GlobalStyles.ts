@@ -1,14 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-
   body {
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
-    color: navy;
   }
 
   h2, p {

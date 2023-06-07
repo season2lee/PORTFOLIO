@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 
-function FourthProject() {
+function Contect() {
   useEffect(() => {
     const box = document.getElementById("myThreeJsCanvas");
     box?.remove();
   }, []);
-  return <div>FourthProject</div>;
+  return <div>Contect</div>;
 }
 
-export default FourthProject;
+export default Contect;
