@@ -5,6 +5,13 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 function FirstProject() {
   useEffect(() => {
+    const box = document.getElementById("homeCanvas");
+    box?.remove();
+    const box1 = document.getElementById("homeCanvas");
+    box1?.remove();
+  }, []);
+
+  useEffect(() => {
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(

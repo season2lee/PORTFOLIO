@@ -24,27 +24,38 @@ function Navbar({ current, setCurrent }: NavbarProps) {
         <p onClick={() => setCurrent("etc")}>etc</p>
         <p onClick={() => setCurrent("contect")}>contect</p>
       </FlexDiv>
-      {current === "home" && <Home current={current} setCurrent={setCurrent} />}
-      {current === "about" && <AboutMe />}
-      {current === "1" && <FirstProject />}
-      {current === "2" && <SecondProject />}
-      {current === "3" && <ThirdProject />}
-      {current === "etc" && <EtcProject />}
-      {current === "contect" && <Contect />}
+      <ScreenDiv>
+        {current === "home" && (
+          <Home current={current} setCurrent={setCurrent} />
+        )}
+        {current === "about" && <AboutMe />}
+        {current === "1" && <FirstProject />}
+        {current === "2" && <SecondProject />}
+        {current === "3" && <ThirdProject />}
+        {current === "etc" && <EtcProject />}
+        {current === "contect" && <Contect />}
+      </ScreenDiv>
     </div>
   );
 }
 
 const FlexDiv = styled.div`
+  top: 0;
+  position: fixed;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
-  margin: 0rem 3rem;
+  /* background-color: white; */
   p {
     cursor: pointer;
     padding: 2rem;
-    color: white;
-    mix-blend-mode: difference;
+    /* color: white;
+    mix-blend-mode: difference; */
   }
+`;
+
+const ScreenDiv = styled.div`
+  margin-top: 6rem;
 `;
 
 export default Navbar;

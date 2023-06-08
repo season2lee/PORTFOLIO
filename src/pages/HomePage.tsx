@@ -6,7 +6,6 @@ function HomePage() {
   return (
     <div>
       <Navbar current={current} setCurrent={setCurrent} />
-      {current}
     </div>
   );
 }
